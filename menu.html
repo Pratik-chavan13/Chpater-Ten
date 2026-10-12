@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Bakery Menu & Catalog — Chapter Ten</title>
+    <meta name="description" content="Explore Chapter Ten's full artisan bakery menu. Fresh croissants, custom layer cakes, fudge brownies, chunky cookies, and artisan sourdough. Order online for Pune delivery.">
+    <meta name="keywords" content="bakery menu Pune, buy cakes online, fresh croissants Pune, sourdough bread, eggless brownies, Chapter Ten menu">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919876543210?text=Hi!%20I'd%20like%20to%20order%20from%20the%20Chapter%20Ten%20menu" target="_blank" id="whatsapp-btn" class="whatsapp-float" aria-label="Order on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Order Now!</span>
+    </a>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-text">chapter ten</span>
+                <span class="logo-tagline">baking and more</span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">Our Story</a></li>
+                <li><a href="menu.html" class="nav-link active">Menu</a></li>
+                <li><a href="events.html" class="nav-link">Events</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="custom-cakes.html" class="nav-link btn-order-nav"><i class="fas fa-birthday-cake"></i> Custom Cakes</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== PAGE HERO ===== -->
+    <header class="page-hero">
+        <div class="page-hero-pattern"></div>
+        <div class="container">
+            <div class="page-breadcrumbs">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right" style="font-size: 0.65rem;"></i>
+                <span>Daily Bakery Menu</span>
+            </div>
+            <h1 class="page-hero-title">
+                Baked Fresh Daily
+                <span class="cursive">Our Artisan Menu</span>
+            </h1>
+            <p class="page-hero-subtitle">
+                Each bake is crafted by hand every morning with 100% French butter, Belgian couverture chocolate, and pure passion. Explore our full catalog and build your WhatsApp order.
+            </p>
+            <div class="page-hero-badges">
+                <div class="page-hero-badge"><i class="fas fa-check-circle"></i> 100% Preservative Free</div>
+                <div class="page-hero-badge"><i class="fas fa-leaf"></i> Pure Eggless Options</div>
+                <div class="page-hero-badge"><i class="fas fa-fire"></i> Hot Out of Oven at 8:30 AM</div>
+                <div class="page-hero-badge"><i class="fas fa-motorcycle"></i> Same-Day Pune Delivery</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== MENU SEARCH & FILTER BAR ===== -->
+    <section class="section" style="padding-top: 40px; padding-bottom: 80px;">
+        <div class="container">
+            <!-- Search Bar -->
+            <div class="menu-search-wrapper reveal-up">
+                <i class="fas fa-search menu-search-icon"></i>
+                <input type="text" id="menu-search-input" class="menu-search-input" placeholder="Search bakes (e.g. croissant, chocolate, eggless, brownie)...">
+            </div>
+
+            <!-- Dietary Filters -->
+            <div class="menu-diet-filter-bar reveal-up">
+                <button class="filter-btn menu-diet-btn active" data-diet="all"><i class="fas fa-globe"></i> All Diets</button>
+                <button class="filter-btn menu-diet-btn" data-diet="eggless"><i class="fas fa-leaf"></i> 100% Pure Eggless</button>
+                <button class="filter-btn menu-diet-btn" data-diet="gluten-free"><i class="fas fa-wheat-awn-circle-exclamation"></i> Gluten-Free</button>
+                <button class="filter-btn menu-diet-btn" data-diet="bestseller"><i class="fas fa-fire"></i> Bestsellers</button>
+            </div>
+
+            <!-- Category Filters -->
+            <div class="menu-filters reveal-up" style="margin-bottom: 40px;">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th-large"></i> All Bakes
+                </button>
+                <button class="filter-btn" data-filter="cakes">
+                    <i class="fas fa-birthday-cake"></i> Cakes
+                </button>
+                <button class="filter-btn" data-filter="pastries">
+                    <i class="fas fa-bread-slice"></i> Pastries
+                </button>
+                <button class="filter-btn" data-filter="cookies">
+                    <i class="fas fa-cookie-bite"></i> Cookies
+                </button>
+                <button class="filter-btn" data-filter="breads">
+                    <i class="fas fa-wheat-awn"></i> Breads
+                </button>
+                <button class="filter-btn" data-filter="brownies">
+                    <i class="fas fa-cube"></i> Brownies
+                </button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid" id="menu-grid">
+                <!-- 1. Classic Vanilla Layer Cake -->
+                <div class="menu-card reveal-up" data-category="cakes" data-diet="eggless bestseller">
+                    <div class="menu-card-img">
+                        <img src="images/cake.jpg" alt="Classic Vanilla Layer Cake" loading="lazy">
+                        <span class="menu-badge badge-eggless"><i class="fas fa-leaf"></i> Eggless</span>
+                        <div class="menu-card-overlay">
+                            <button class="btn-quick-view" onclick="openQuickView('Classic Vanilla Layer Cake', '₹1,200', 'images/cake.jpg', 'Delicate sponge infused with real Madagascar bourbon vanilla bean caviar, frosted with smooth French buttercream and finished with edible floral pearls.', 'cakes', '500g / 1kg', 'Madagascar Vanilla, French Butter, Cane Sugar, Wheat Flour', '4.9 (128 reviews)')">
+                                <i class="fas fa-eye"></i> Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-card-title">Vanilla Layer Cake</h3>
+                            <span class="menu-card-price">₹1,200</span>
+                        </div>
+                        <p class="menu-card-desc">Madagascar bourbon vanilla sponge with light whipped French buttercream.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-rating">
+                                <i class="fas fa-star"></i><span>4.9</span>
+                            </div>
+                            <div style="display: flex; gap: 8px;">
+                                <button class="btn-add-cart" onclick="addItemToTray('Vanilla Layer Cake', '₹1,200')">
+                                    <i class="fas fa-plus"></i> Add
+                                </button>
+                                <button class="btn-add-cart" style="background: rgba(224, 139, 139, 0.15); color: var(--coral-dark);" onclick="openOrderModal('Classic Vanilla Layer Cake', '₹1,200')">
+                                    <i class="fab fa-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Red Velvet Dream Cake -->
+                <div class="menu-card reveal-up" data-category="cakes" data-diet="eggless bestseller">
+                    <div class="menu-card-img">
+                        <img src="images/hero.jpg" alt="Red Velvet Dream Cake" loading="lazy">
+                        <span class="menu-badge badge-bestseller"><i class="fas fa-fire"></i> Bestseller</span>
+                        <div class="menu-card-overlay">
+                            <button class="btn-quick-view" onclick="openQuickView('Red Velvet Dream Cake', '₹1,400', 'images/hero.jpg', 'Velvety crimson cocoa sponge with our signature tangy cream cheese frosting and fine red velvet crumbs.', 'cakes', '500g / 1kg', 'Cocoa Powder, Cream Cheese, Pure Butter, Cultured Buttermilk', '4.9 (95 reviews)')">
+                                <i class="fas fa-eye"></i> Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-card-title">Red Velvet Dream</h3>
+                            <span class="menu-card-price">₹1,400</span>
+                        </div>
+                        <p class="menu-card-desc">Velvety crimson sponge with Philadelphia cream cheese frosting.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-rating">
+                                <i class="fas fa-star"></i><span>4.9</span>
+                            </div>
+                            <div style="display: flex; gap: 8px;">
+                                <button class="btn-add-cart" onclick="addItemToTray('Red Velvet Dream', '₹1,400')">
+                                    <i class="fas fa-plus"></i> Add
+                                </button>
+                                <button class="btn-add-cart" style="background: rgba(224, 139, 139, 0.15); color: var(--coral-dark);" onclick="openOrderModal('Red Velvet Dream Cake', '₹1,400')">
+                                    <i class="fab fa-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Butter Croissant -->
+                <div class="menu-card reveal-up" data-category="pastries" data-diet="bestseller">
+                    <div class="menu-card-img">
+                        <img src="images/pastries.jpg" alt="Butter Croissant" loading="lazy">
+                        <span class="menu-badge badge-bestseller"><i class="fas fa-fire"></i> Daily Fresh</span>
+                        <div class="menu-card-overlay">
+                            <button class="btn-quick-view" onclick="openQuickView('Butter Croissant', '₹180', 'images/pastries.jpg', 'Hand-laminated 72-layer classic French croissant made with pure cultured butter. Shatteringly crisp on the outside, airy honeycomb inside.', 'pastries', '1 Piece (~90g)', 'French Butter, Unbleached Flour, Sea Salt, Yeast', '5.0 (210 reviews)')">
+                                <i class="fas fa-eye"></i> Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-card-title">Butter Croissant</h3>
+                            <span class="menu-card-price">₹180</span>
+                        </div>
+                        <p class="menu-card-desc">72 flaky layers of pure French butter. Golden crisp and cloud-soft inside.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-rating">
+                                <i class="fas fa-star"></i><span>5.0</span>
+                            </div>
+                            <div style="display: flex; gap: 8px;">
+                                <button class="btn-add-cart" onclick="addItemToTray('Butter Croissant', '₹180')">
+                                    <i class="fas fa-plus"></i> Add
+                                </button>
+                                <button class="btn-add-cart" style="background: rgba(224, 139, 139, 0.15); color: var(--coral-dark);" onclick="openOrderModal('Butter Croissant', '₹180')">
+                                    <i class="fab fa-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Danish Pastry Box -->
+                <div class="menu-card reveal-up" data-category="pastries" data-diet="eggless">
+                    <div class="menu-card-img">
+                        <img src="images/pastries.jpg" alt="Danish Pastry Box" loading="lazy">
+                        <span class="menu-badge badge-eggless"><i class="fas fa-leaf"></i> Eggless</span>
+                        <div class="menu-card-overlay">
+                            <button class="btn-quick-view" onclick="openQuickView('Danish Pastry Box', '₹650', 'images/pastries.jpg', 'Assortment of 4 artisan Danishes filled with vanilla custard, dark berries, and roasted almond flakes.', 'pastries', 'Box of 4', 'Puff Pastry, Vanilla Custard, Berry Compote, Almonds', '4.8 (78 reviews)')">
+                                <i class="fas fa-eye"></i> Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-card-title">Danish Pastry Box</h3>
+                            <span class="menu-card-price">₹650</span>
+                        </div>
+                        <p class="menu-card-desc">Box of 4 fruit &amp; custard filled artisan Danish pastries with toasted almonds.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-rating">
+                                <i class="fas fa-star"></i><span>4.8</span>
+                            </div>
+                            <div style="display: flex; gap: 8px;">
+                                <button class="btn-add-cart" onclick="addItemToTray('Danish Pastry Box', '₹650')">
+                                    <i class="fas fa-plus"></i> Add
+                                </button>
+                                <button class="btn-add-cart" style="background: rgba(224, 139, 139, 0.15); color: var(--coral-dark);" onclick="openOrderModal('Danish Pastry Box', '₹650')">
+                                    <i class="fab fa-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Assorted Cookie Box -->
+                <div class="menu-card reveal-up" data-category="cookies" data-diet="eggless bestseller">
+                    <div class="menu-card-img">
+                        <img src="images/cookies.jpg" alt="Assorted Cookie Box" loading="lazy">
+                        <span class="menu-badge badge-bestseller"><i class="fas fa-fire"></i> Fan Favorite</span>
+                        <div class="menu-card-overlay">
+                            <button class="btn-quick-view" onclick="openQuickView('Assorted Cookie Box', '₹550', 'images/cookies.jpg', '6 oversized NYC-style chunky cookies: Triple Chocolate, Biscoff Stuffed, Sea Salt Caramel, Red Velvet White Choc, and Oat Cranberry.', 'cookies', 'Box of 6 (~480g)', 'Belgian Chocolate, Brown Sugar, Pure Butter, Flour', '4.9 (160 reviews)')">
+                                <i class="fas fa-eye"></i> Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-card-title">Chunky Cookie Box</h3>
+                            <span class="menu-card-price">₹550</span>
+                        </div>
+                        <p class="menu-card-desc">6 NYC-style chunky stuffed cookies with gooey molten centers.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-rating">
+                                <i class="fas fa-star"></i><span>4.9</span>
+                            </div>
+                            <div style="display: flex; gap: 8px;">
+                                <button class="btn-add-cart" onclick="addItemToTray('Chunky Cookie Box', '₹550')">
+                                    <i class="fas fa-plus"></i> Add
+                                </button>
+                                <button class="btn-add-cart" style="background: rgba(224, 139, 139, 0.15); color: var(--coral-dark);" onclick="openOrderModal('Assorted Cookie Box', '₹550')">
+                                    <i class="fab fa-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. French Macaron Tower Box -->
+                <div class="menu-card reveal-up" data-category="cookies" data-diet="gluten-free">
+                    <div class="menu-card-img">
+                        <img src="images/cookies.jpg" alt="French Macaron Box" loading="lazy">
+                        <span class="menu-badge badge-gf"><i class="fas fa-wheat-awn-circle-exclamation"></i> Gluten-Free</span>
+                        <div class="menu-card-overlay">
+                            <button class="btn-quick-view" onclick="openQuickView('French Macaron Box', '₹900', 'images/cookies.jpg', '12 delicate Parisian macarons with almond flour shells and rich ganache centers: Pistachio, Salted Caramel, Dark Chocolate, Rose Raspberry.', 'cookies', 'Box of 12', 'Californian Almond Flour, Egg Whites, Ganache', '4.9 (88 reviews)')">
+                                <i class="fas fa-eye"></i> Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-card-title">Parisian Macarons</h3>
+                            <span class="menu-card-price">₹900</span>
+                        </div>
+                        <p class="menu-card-desc">Box of 12 delicate almond macarons in pastel colors &amp; gourmet fillings.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-rating">
+                                <i class="fas fa-star"></i><span>4.9</span>
+                            </div>
+                            <div style="display: flex; gap: 8px;">
+                                <button class="btn-add-cart" onclick="addItemToTray('Parisian Macarons', '₹900')">
+                                    <i class="fas fa-plus"></i> Add
+                                </button>
+                                <button class="btn-add-cart" style="background: rgba(224, 139, 139, 0.15); color: var(--coral-dark);" onclick="openOrderModal('French Macaron Tower', '₹900')">
+                                    <i class="fab fa-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Artisan Sourdough Loaf -->
+                <div class="menu-card reveal-up" data-category="breads" data-diet="eggless vegan">
+                    <div class="menu-card-img">
+                        <img src="images/bread.jpg" alt="Artisan Sourdough Loaf" loading="lazy">
+                        <span class="menu-badge badge-eggless"><i class="fas fa-leaf"></i> 100% Vegan</span>
+                        <div class="menu-card-overlay">
+                            <button class="btn-quick-view" onclick="openQuickView('Artisan Sourdough Loaf', '₹350', 'images/bread.jpg', 'Naturally fermented for 36 hours with our 5-year-old sourdough starter. Blistered crust, tender open crumb with an earthy sour tang.', 'breads', '1 Loaf (~700g)', 'Organic Flour, Water, Wild Yeast, Sea Salt', '4.9 (142 reviews)')">
+                                <i class="fas fa-eye"></i> Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-card-title">Artisan Sourdough</h3>
+                            <span class="menu-card-price">₹350</span>
+                        </div>
+                        <p class="menu-card-desc">36-hour naturally fermented loaf with crackling crust &amp; soft chewy crumb.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-rating">
+                                <i class="fas fa-star"></i><span>4.9</span>
+                            </div>
+                            <div style="display: flex; gap: 8px;">
+                                <button class="btn-add-cart" onclick="addItemToTray('Artisan Sourdough', '₹350')">
+                                    <i class="fas fa-plus"></i> Add
+                                </button>
+                                <button class="btn-add-cart" style="background: rgba(224, 139, 139, 0.15); color: var(--coral-dark);" onclick="openOrderModal('Artisan Sourdough Loaf', '₹350')">
+                                    <i class="fab fa-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Garlic Herb Focaccia -->
+                <div class="menu-card reveal-up" data-category="breads" data-diet="eggless vegan">
+                    <div class="menu-card-img">
+                        <img src="images/bread.jpg" alt="Garlic Herb Focaccia" loading="lazy">
+                        <span class="menu-badge badge-eggless"><i class="fas fa-leaf"></i> 100% Vegan</span>
+                        <div class="menu-card-overlay">
+                            <button class="btn-quick-view" onclick="openQuickView('Garlic Herb Focaccia', '₹280', 'images/bread.jpg', 'Ligurian-style fluffy focaccia drenched in cold-pressed extra virgin olive oil, fresh rosemary, roasted garlic cloves, and Maldon sea salt flakes.', 'breads', 'Slab (~450g)', 'Extra Virgin Olive Oil, Fresh Rosemary, Roasted Garlic, Flour', '4.8 (85 reviews)')">
+                                <i class="fas fa-eye"></i> Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-card-title">Rosemary Focaccia</h3>
+                            <span class="menu-card-price">₹280</span>
+                        </div>
+                        <p class="menu-card-desc">Extra virgin olive oil focaccia studded with roasted garlic &amp; rosemary.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-rating">
+                                <i class="fas fa-star"></i><span>4.8</span>
+                            </div>
+                            <div style="display: flex; gap: 8px;">
+                                <button class="btn-add-cart" onclick="addItemToTray('Rosemary Focaccia', '₹280')">
+                                    <i class="fas fa-plus"></i> Add
+                                </button>
+                                <button class="btn-add-cart" style="background: rgba(224, 139, 139, 0.15); color: var(--coral-dark);" onclick="openOrderModal('Garlic Herb Focaccia', '₹280')">
+                                    <i class="fab fa-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. Fudge Brownie Stack -->
+                <div class="menu-card reveal-up" data-category="brownies" data-diet="eggless bestseller">
+                    <div class="menu-card-img">
+                        <img src="images/brownies.jpg" alt="Fudge Brownie Stack" loading="lazy">
+                        <span class="menu-badge badge-bestseller"><i class="fas fa-fire"></i> Best in Town</span>
+                        <div class="menu-card-overlay">
+                            <button class="btn-quick-view" onclick="openQuickView('Fudge Brownie Stack', '₹450', 'images/brownies.jpg', 'Box of 4 ultra-fudgy Belgian dark chocolate brownies with crinkly paper-thin tops and dense gooey interiors.', 'brownies', 'Box of 4 (~380g)', '70% Belgian Dark Chocolate, Butter, Cocoa, Brown Sugar', '5.0 (240 reviews)')">
+                                <i class="fas fa-eye"></i> Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-card-title">Fudge Brownie Stack</h3>
+                            <span class="menu-card-price">₹450</span>
+                        </div>
+                        <p class="menu-card-desc">Box of 4 crinkle-top brownies with decadent molten dark chocolate.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-rating">
+                                <i class="fas fa-star"></i><span>5.0</span>
+                            </div>
+                            <div style="display: flex; gap: 8px;">
+                                <button class="btn-add-cart" onclick="addItemToTray('Fudge Brownie Stack', '₹450')">
+                                    <i class="fas fa-plus"></i> Add
+                                </button>
+                                <button class="btn-add-cart" style="background: rgba(224, 139, 139, 0.15); color: var(--coral-dark);" onclick="openOrderModal('Fudge Brownie Stack', '₹450')">
+                                    <i class="fab fa-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. Nutella Swirl Brownies -->
+                <div class="menu-card reveal-up" data-category="brownies" data-diet="eggless">
+                    <div class="menu-card-img">
+                        <img src="images/brownies.jpg" alt="Nutella Swirl Brownies" loading="lazy">
+                        <span class="menu-badge badge-eggless"><i class="fas fa-leaf"></i> Eggless</span>
+                        <div class="menu-card-overlay">
+                            <button class="btn-quick-view" onclick="openQuickView('Nutella Swirl Brownies', '₹500', 'images/brownies.jpg', 'Dense chocolate brownies marbled with rich roasted hazelnut Nutella spread and toasted sea salt flakes.', 'brownies', 'Box of 4 (~400g)', 'Nutella, Dark Chocolate, Roasted Hazelnuts, Sea Salt', '4.8 (115 reviews)')">
+                                <i class="fas fa-eye"></i> Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-card-title">Nutella Swirl Brownies</h3>
+                            <span class="menu-card-price">₹500</span>
+                        </div>
+                        <p class="menu-card-desc">Fudgy dark chocolate brownies with thick ribbons of Nutella spread.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-rating">
+                                <i class="fas fa-star"></i><span>4.8</span>
+                            </div>
+                            <div style="display: flex; gap: 8px;">
+                                <button class="btn-add-cart" onclick="addItemToTray('Nutella Swirl Brownies', '₹500')">
+                                    <i class="fas fa-plus"></i> Add
+                                </button>
+                                <button class="btn-add-cart" style="background: rgba(224, 139, 139, 0.15); color: var(--coral-dark);" onclick="openOrderModal('Nutella Swirl Brownies', '₹500')">
+                                    <i class="fab fa-whatsapp"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Empty Search Message -->
+            <div id="menu-no-results" style="display: none; text-align: center; padding: 60px 20px;">
+                <i class="fas fa-cookie-bite" style="font-size: 3rem; color: var(--coral-light); margin-bottom: 16px;"></i>
+                <h3 style="font-family: 'Playfair Display', serif; color: var(--text-dark);">No bakes found</h3>
+                <p style="color: var(--text-muted);">Try searching for another keyword or browse our categories!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FLOATING ORDER TRAY ===== -->
+    <div class="floating-order-tray" id="floating-order-tray">
+        <span class="tray-count-badge" id="tray-count">0</span>
+        <div class="tray-text">Selected Bakes: <span class="tray-total-price" id="tray-total">₹0</span></div>
+        <button class="tray-btn-checkout" id="tray-checkout-btn">
+            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+        </button>
+    </div>
+
+    <!-- ===== QUICK VIEW MODAL ===== -->
+    <div id="quick-view-modal" class="modal-backdrop">
+        <div class="modal-content quick-view-modal-content">
+            <button class="modal-close" onclick="closeQuickView()">&times;</button>
+            <div class="quick-view-grid">
+                <div class="qv-image"><img id="qv-img" src="" alt="Product"></div>
+                <div class="qv-details">
+                    <span class="qv-category" id="qv-category">Cakes</span>
+                    <h3 class="qv-title" id="qv-title">Product Title</h3>
+                    <div class="qv-rating" id="qv-rating">★★★★★ <span>4.9</span></div>
+                    <div class="qv-price" id="qv-price">₹0</div>
+                    <p class="qv-desc" id="qv-desc">Description</p>
+                    <div class="qv-meta">
+                        <div class="qv-meta-item"><strong>Portion:</strong> <span id="qv-size">Standard</span></div>
+                        <div class="qv-meta-item"><strong>Ingredients:</strong> <span id="qv-ingredients">Natural</span></div>
+                    </div>
+                    <button class="btn btn-primary btn-block" id="qv-order-btn">
+                        <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== ORDER MODAL ===== -->
+    <div id="order-modal" class="modal-backdrop">
+        <div class="modal-content order-modal-content">
+            <button class="modal-close" onclick="closeOrderModal()">&times;</button>
+            <div class="order-modal-header">
+                <h3>Order via WhatsApp</h3>
+                <p>We'll prepare a WhatsApp message with your selected item</p>
+            </div>
+            <form id="order-form" onsubmit="handleOrderSubmit(event)">
+                <div class="form-group">
+                    <label for="order-item-name">Item</label>
+                    <input type="text" id="order-item-name" class="form-control" readonly>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="order-item-price">Price</label>
+                        <input type="text" id="order-item-price" class="form-control" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="order-item-qty">Quantity</label>
+                        <select id="order-item-qty" class="form-control">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="order-customer-name">Your Name</label>
+                    <input type="text" id="order-customer-name" class="form-control" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="order-notes">Special Instructions (Optional)</label>
+                    <textarea id="order-notes" class="form-control" rows="2" placeholder="e.g. eggless, message on cake, delivery date..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i class="fab fa-whatsapp"></i> Send Order on WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="logo-text">chapter ten</span>
+                    <span class="logo-tagline">baking and more</span>
+                    <p>Where every bite tells a story. Artisan bakes crafted daily with pure passion in Pune.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/919876543210" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Explore Pages</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">Our Story &amp; Craft</a></li>
+                        <li><a href="menu.html">Bakery Menu &amp; Catalog</a></li>
+                        <li><a href="events.html">Events &amp; Catering</a></li>
+                        <li><a href="custom-cakes.html">Custom Cakes Studio</a></li>
+                        <li><a href="contact.html">Visit &amp; Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Artisan Specialties</h4>
+                    <ul>
+                        <li><a href="custom-cakes.html">Vintage Lambeth Heart Cakes</a></li>
+                        <li><a href="custom-cakes.html">Grand Wedding Tiers</a></li>
+                        <li><a href="custom-cakes.html">Pastel Bento Cakes</a></li>
+                        <li><a href="menu.html">Pure Butter Croissants</a></li>
+                        <li><a href="menu.html">100% Eggless Treats</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Shop No. 5, Rose Garden Complex, MG Road, Pune</p>
+                    <p><i class="fas fa-phone-alt"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> hello@chapterten.in</p>
+                    <p><i class="fas fa-clock"></i> Mon–Sat: 8AM–9PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Chapter Ten — Baking and More. All rights reserved.</p>
+                <p>Designed with <i class="fas fa-heart" style="color: var(--coral);"></i> for sweetest moments</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

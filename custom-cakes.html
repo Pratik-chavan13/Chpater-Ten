@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Cakes & Bespoke Celebration Cakes — Chapter Ten</title>
+    <meta name="description" content="Design your dream custom cake with Chapter Ten. From romantic vintage Lambeth heart cakes to grand multi-tiered wedding showstoppers. 100% Eggless options available in Pune.">
+    <meta name="keywords" content="custom cakes Pune, wedding cakes, Lambeth heart cake, bento cake, eggless custom cake, Chapter Ten bakery">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919876543210?text=Hi%20Chapter%20Ten!%20I'd%20like%20to%20inquire%20about%20a%20custom%20cake" target="_blank" id="whatsapp-btn" class="whatsapp-float" aria-label="Order on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Cake Consultation!</span>
+    </a>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-text">chapter ten</span>
+                <span class="logo-tagline">baking and more</span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">Our Story</a></li>
+                <li><a href="menu.html" class="nav-link">Menu</a></li>
+                <li><a href="events.html" class="nav-link">Events</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="#custom-cake-builder" class="nav-link btn-order-nav"><i class="fas fa-birthday-cake"></i> Design Cake</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== PAGE HERO ===== -->
+    <header class="page-hero">
+        <div class="page-hero-pattern"></div>
+        <div class="container">
+            <div class="page-breadcrumbs">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right" style="font-size: 0.65rem;"></i>
+                <span>Custom Cake Studio</span>
+            </div>
+            <h1 class="page-hero-title">
+                Handcrafted Celebration Art
+                <span class="cursive">Bespoke Custom Cakes</span>
+            </h1>
+            <p class="page-hero-subtitle">
+                Every milestone deserves an unforgettable centerpiece. From trendy pastel Korean bento cakes to regal multi-tier wedding creations, we turn your sweet imagination into edible perfection.
+            </p>
+            <div class="page-hero-badges">
+                <div class="page-hero-badge"><i class="fas fa-leaf"></i> 100% Pure Eggless Options</div>
+                <div class="page-hero-badge"><i class="fas fa-certificate"></i> Belgian Couverture Chocolate</div>
+                <div class="page-hero-badge"><i class="fas fa-truck"></i> Chilled Safe Delivery in Pune</div>
+                <div class="page-hero-badge"><i class="fas fa-clock"></i> 24–48h Advance Booking</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== INTERACTIVE CAKE BUILDER STUDIO ===== -->
+    <section id="custom-cake-builder" class="custom-cake-section" style="padding-top: 40px;">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag"><i class="fas fa-wand-magic-sparkles"></i> Live Visual Studio</span>
+                <h2 class="section-title">Interactive <span class="highlight">Cake Customizer</span></h2>
+                <div class="section-divider">
+                    <span class="divider-line"></span>
+                    <i class="fas fa-birthday-cake divider-icon"></i>
+                    <span class="divider-line"></span>
+                </div>
+                <p class="section-subtitle">Pick your tiers, sponge, frosting palette, and custom message below. Watch the live cake preview update in real time with instant pricing!</p>
+            </div>
+
+            <!-- Customizer Grid -->
+            <div class="cake-customizer-grid">
+                <!-- Left: Live Visual Stage -->
+                <div class="cake-visual-card reveal-up">
+                    <div class="cake-visual-header">
+                        <span class="cake-badge-live"><i class="fas fa-magic"></i> Live Interactive Preview</span>
+                        <span class="cake-badge-diet" id="cake-live-diet-badge">100% Pure Eggless 🌱</span>
+                    </div>
+
+                    <!-- Stage -->
+                    <div class="cake-stage" id="cake-stage">
+                        <div class="cake-stage-sparkles">✨</div>
+
+                        <!-- Stylized Cake Structure -->
+                        <div class="cake-structure" id="cake-structure">
+                            <div class="cake-topper-wrap">
+                                <i class="fas fa-heart cake-topper-icon"></i>
+                            </div>
+                            <div class="cake-tier cake-tier-top" id="cake-tier-top" style="display: none;"></div>
+                            <div class="cake-tier cake-tier-middle" id="cake-tier-middle" style="display: none;"></div>
+                            <div class="cake-tier cake-tier-bottom" id="cake-tier-bottom"></div>
+                        </div>
+
+                        <!-- Piped Message Ribbon -->
+                        <div class="cake-piped-message-ribbon">
+                            <span class="cake-piped-text" id="cake-preview-text">Chapter Ten</span>
+                        </div>
+
+                        <!-- Cake Stand Plate & Base -->
+                        <div class="cake-stand-plate"></div>
+                        <div class="cake-stand-base"></div>
+                    </div>
+
+                    <!-- Live Specs Summary -->
+                    <div class="cake-live-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Weight</span>
+                            <span class="spec-val" id="spec-weight-val">1.0 kg</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Servings</span>
+                            <span class="spec-val" id="spec-servings-val">Serves 6–8</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Profile</span>
+                            <span class="spec-val" id="spec-flavor-val">Belgian • Coral</span>
+                        </div>
+                    </div>
+
+                    <!-- Live Price Box -->
+                    <div class="cake-live-price-box">
+                        <div>
+                            <span class="price-box-title">Estimated Studio Quote</span>
+                            <div style="font-size: 0.75rem; color: var(--text-light);">Handcrafted &amp; Boxed</div>
+                        </div>
+                        <div class="price-box-val" id="cake-live-price-val">₹1,400</div>
+                    </div>
+                </div>
+
+                <!-- Right: Builder Controls -->
+                <div class="cake-builder-card reveal-up">
+                    <form id="cake-customizer-form" onsubmit="event.preventDefault();">
+                        <!-- Step 1: Size & Tiers -->
+                        <div class="builder-step">
+                            <div class="builder-step-header">
+                                <span class="step-num">1</span>
+                                <h3 class="step-title">Choose Size &amp; Shape</h3>
+                                <span class="step-subtitle">Weight &amp; Tiers</span>
+                            </div>
+                            <div class="options-pill-grid">
+                                <div class="option-pill-btn size-pill-btn" data-name="Bento Petite Box" data-weight="0.35 kg" data-servings="Serves 1–2" data-price="650" data-tiers="1" data-shape="bento">
+                                    <i class="fas fa-box-heart"></i>
+                                    <span class="pill-title">Bento Mini</span>
+                                    <span class="pill-sub">0.35kg • ₹650</span>
+                                </div>
+                                <div class="option-pill-btn size-pill-btn" data-name="Petite 1-Tier" data-weight="0.5 kg" data-servings="Serves 3–4" data-price="850" data-tiers="1" data-shape="round">
+                                    <i class="fas fa-birthday-cake"></i>
+                                    <span class="pill-title">Petite</span>
+                                    <span class="pill-sub">0.5kg • ₹850</span>
+                                </div>
+                                <div class="option-pill-btn size-pill-btn active" data-name="Classic 1-Tier (1kg)" data-weight="1.0 kg" data-servings="Serves 6–8" data-price="1400" data-tiers="1" data-shape="round">
+                                    <i class="fas fa-cake-candles"></i>
+                                    <span class="pill-title">Classic 1-Tier</span>
+                                    <span class="pill-sub">1.0kg • ₹1,400</span>
+                                </div>
+                                <div class="option-pill-btn size-pill-btn" data-name="Vintage Heart Cake" data-weight="1.0 kg" data-servings="Serves 6–8" data-price="1650" data-tiers="1" data-shape="heart">
+                                    <i class="fas fa-heart"></i>
+                                    <span class="pill-title">Heart Cake</span>
+                                    <span class="pill-sub">1.0kg • ₹1,650</span>
+                                </div>
+                                <div class="option-pill-btn size-pill-btn" data-name="Grand 2-Tier (2kg)" data-weight="2.0 kg" data-servings="Serves 15–18" data-price="2600" data-tiers="2" data-shape="round">
+                                    <i class="fas fa-layer-group"></i>
+                                    <span class="pill-title">Grand 2-Tier</span>
+                                    <span class="pill-sub">2.0kg • ₹2,600</span>
+                                </div>
+                                <div class="option-pill-btn size-pill-btn" data-name="Luxury 3-Tier (3.5kg)" data-weight="3.5 kg" data-servings="Serves 30–35" data-price="4500" data-tiers="3" data-shape="round">
+                                    <i class="fas fa-cake-candles"></i>
+                                    <span class="pill-title">Luxury 3-Tier</span>
+                                    <span class="pill-sub">3.5kg • ₹4,500</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Sponge Flavour -->
+                        <div class="builder-step">
+                            <div class="builder-step-header">
+                                <span class="step-num">2</span>
+                                <h3 class="step-title">Select Sponge Flavour</h3>
+                                <span class="step-subtitle">100% Scratch Baked</span>
+                            </div>
+                            <div class="options-pill-grid">
+                                <div class="option-pill-btn flavor-pill-btn active" data-name="Belgian Dark Truffle" data-addon-price="0">
+                                    <i class="fas fa-cookie"></i>
+                                    <span class="pill-title">Belgian Truffle</span>
+                                    <span class="pill-sub">Rich Couverture</span>
+                                </div>
+                                <div class="option-pill-btn flavor-pill-btn" data-name="Madagascar Vanilla Bean" data-addon-price="0">
+                                    <i class="fas fa-seedling"></i>
+                                    <span class="pill-title">Vanilla Bean</span>
+                                    <span class="pill-sub">Pure Bourbon</span>
+                                </div>
+                                <div class="option-pill-btn flavor-pill-btn" data-name="Red Velvet Cream Cheese" data-addon-price="100">
+                                    <i class="fas fa-heart"></i>
+                                    <span class="pill-title">Red Velvet</span>
+                                    <span class="pill-sub">+₹100 Add-on</span>
+                                </div>
+                                <div class="option-pill-btn flavor-pill-btn" data-name="Lotus Biscoff Crunch" data-addon-price="150">
+                                    <i class="fas fa-cookie-bite"></i>
+                                    <span class="pill-title">Biscoff Crunch</span>
+                                    <span class="pill-sub">+₹150 Add-on</span>
+                                </div>
+                                <div class="option-pill-btn flavor-pill-btn" data-name="Persian Rose &amp; Pistachio" data-addon-price="200">
+                                    <i class="fas fa-spa"></i>
+                                    <span class="pill-title">Rose Pistachio</span>
+                                    <span class="pill-sub">+₹200 Add-on</span>
+                                </div>
+                                <div class="option-pill-btn flavor-pill-btn" data-name="Salted Caramel Praline" data-addon-price="150">
+                                    <i class="fas fa-fire-alt"></i>
+                                    <span class="pill-title">Salted Caramel</span>
+                                    <span class="pill-sub">+₹150 Add-on</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Frosting Palette -->
+                        <div class="builder-step">
+                            <div class="builder-step-header">
+                                <span class="step-num">3</span>
+                                <h3 class="step-title">Frosting Palette</h3>
+                                <span class="step-subtitle">Color Theme</span>
+                            </div>
+                            <div class="color-swatches-grid">
+                                <div class="color-swatch-item active" data-name="Coral Rose Blush" data-color="#E08B8B">
+                                    <span class="swatch-dot" style="background: #E08B8B;"></span>
+                                    <span class="swatch-name">Coral Rose</span>
+                                </div>
+                                <div class="color-swatch-item" data-name="Sage Vintage Green" data-color="#9BB5A0">
+                                    <span class="swatch-dot" style="background: #9BB5A0;"></span>
+                                    <span class="swatch-name">Sage Green</span>
+                                </div>
+                                <div class="color-swatch-item" data-name="French Vanilla Ivory" data-color="#FFF3E3">
+                                    <span class="swatch-dot" style="background: #FFF3E3; border-color: #ddd;"></span>
+                                    <span class="swatch-name">Ivory Cream</span>
+                                </div>
+                                <div class="color-swatch-item" data-name="Dark Truffle Chocolate" data-color="#4A2E2B">
+                                    <span class="swatch-dot" style="background: #4A2E2B;"></span>
+                                    <span class="swatch-name">Dark Truffle</span>
+                                </div>
+                                <div class="color-swatch-item" data-name="Lavender Romance" data-color="#B8A3BA">
+                                    <span class="swatch-dot" style="background: #B8A3BA;"></span>
+                                    <span class="swatch-name">Lavender</span>
+                                </div>
+                                <div class="color-swatch-item" data-name="Red Velvet Crimson" data-color="#8B263E">
+                                    <span class="swatch-dot" style="background: #8B263E;"></span>
+                                    <span class="swatch-name">Crimson Red</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Dietary Option -->
+                        <div class="builder-step">
+                            <div class="builder-step-header">
+                                <span class="step-num">4</span>
+                                <h3 class="step-title">Dietary Preference</h3>
+                                <span class="step-subtitle">Quality Guaranteed</span>
+                            </div>
+                            <div class="diet-pills-grid">
+                                <div class="diet-pill custom-diet-pill active" data-name="100% Pure Eggless 🌱">
+                                    <i class="fas fa-leaf"></i> 100% Eggless 🌱
+                                </div>
+                                <div class="diet-pill custom-diet-pill" data-name="Traditional with Egg 🥚">
+                                    <i class="fas fa-egg"></i> With Egg 🥚
+                                </div>
+                                <div class="diet-pill custom-diet-pill" data-name="Gluten-Free Flour 🌾">
+                                    <i class="fas fa-wheat-awn-circle-exclamation"></i> Gluten-Free 🌾
+                                </div>
+                                <div class="diet-pill custom-diet-pill" data-name="Sugar-Free / Keto 🍯">
+                                    <i class="fas fa-heartbeat"></i> Sugar-Free 🍯
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 5: Custom Message on Cake -->
+                        <div class="builder-step">
+                            <div class="builder-step-header">
+                                <span class="step-num">5</span>
+                                <h3 class="step-title">Custom Message on Cake</h3>
+                                <span class="step-subtitle">Hand-Piped</span>
+                            </div>
+                            <div class="builder-input-wrap">
+                                <input type="text" id="cake-msg-input" class="builder-input" maxlength="30" value="Chapter Ten" placeholder="e.g. Happy 25th Sarah ♡">
+                                <span class="input-char-count" id="msg-char-count">11/30</span>
+                            </div>
+                        </div>
+
+                        <!-- Step 6: Occasion & Delivery Date -->
+                        <div class="builder-step">
+                            <div class="builder-step-header">
+                                <span class="step-num">6</span>
+                                <h3 class="step-title">Occasion &amp; Preferred Date</h3>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <select id="cake-occasion-select" class="form-control" style="background: var(--bg-cream);">
+                                        <option value="Birthday Celebration">🎂 Birthday Celebration</option>
+                                        <option value="Wedding / Reception">💍 Wedding / Reception</option>
+                                        <option value="Anniversary">🥂 Anniversary Milestone</option>
+                                        <option value="Baby Shower / Gender Reveal">🧸 Baby Shower / Gender Reveal</option>
+                                        <option value="Corporate / Brand Event">🏢 Corporate / Brand Event</option>
+                                        <option value="Just Because / Party">🎉 Just Because / Celebration</option>
+                                    </select>
+                                </div>
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <input type="date" id="cake-date-input" class="form-control" style="background: var(--bg-cream);">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Action Button -->
+                        <div class="builder-actions">
+                            <button type="button" class="btn btn-primary btn-order-custom" id="btn-order-custom-cake">
+                                <i class="fab fa-whatsapp" style="font-size: 1.3rem;"></i>
+                                <span>Order This Custom Cake on WhatsApp</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SIZING & SERVINGS GUIDE TABLE ===== -->
+    <section class="section" style="background: var(--bg-card); padding: var(--space-3xl) 0;">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag"><i class="fas fa-ruler-combined"></i> Portion Planning</span>
+                <h2 class="section-title">Cake Sizing &amp; <span class="highlight">Servings Guide</span></h2>
+                <div class="section-divider">
+                    <span class="divider-line"></span>
+                    <i class="fas fa-users divider-icon"></i>
+                    <span class="divider-line"></span>
+                </div>
+                <p class="section-subtitle">Not sure what size you need? Use our handy portion guide to ensure every guest gets a generous slice.</p>
+            </div>
+
+            <div class="guide-table-wrap reveal-up">
+                <table class="custom-guide-table">
+                    <thead>
+                        <tr>
+                            <th>Cake Style</th>
+                            <th>Weight</th>
+                            <th>Dimensions</th>
+                            <th>Servings</th>
+                            <th>Recommended Occasion</th>
+                            <th>Base Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Bento Box Petite</strong></td>
+                            <td>~350g</td>
+                            <td>4" Diameter (Single Layer)</td>
+                            <td>1 – 2 Persons</td>
+                            <td>Intimate Date, Small Gift, Milestone Photo</td>
+                            <td class="highlight-col">₹650</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Petite Celebration</strong></td>
+                            <td>~500g</td>
+                            <td>5" Diameter (Double Layer)</td>
+                            <td>3 – 4 Persons</td>
+                            <td>Family Tea, Kids Mini Birthday</td>
+                            <td class="highlight-col">₹850</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Classic 1-Tier</strong></td>
+                            <td>1.0 kg</td>
+                            <td>6.5" Diameter (Triple Layer)</td>
+                            <td>6 – 8 Persons</td>
+                            <td>Standard Birthdays, Dinner Parties</td>
+                            <td class="highlight-col">₹1,400</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Vintage Lambeth Heart</strong></td>
+                            <td>1.0 kg</td>
+                            <td>7" Heart Shape (Triple Layer)</td>
+                            <td>6 – 8 Persons</td>
+                            <td>Anniversaries, Romantic Proposals, Themed Parties</td>
+                            <td class="highlight-col">₹1,650</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Grand 2-Tier Stack</strong></td>
+                            <td>2.0 kg</td>
+                            <td>6" + 8" Stitched Tiers</td>
+                            <td>15 – 18 Persons</td>
+                            <td>Engagement Ceremonies, Milestone 25th/50th</td>
+                            <td class="highlight-col">₹2,600</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Luxury 3-Tier Showpiece</strong></td>
+                            <td>3.5 kg</td>
+                            <td>5" + 7" + 9" Floral Tiers</td>
+                            <td>30 – 35 Persons</td>
+                            <td>Weddings, Grand Receptions, Brand Galas</td>
+                            <td class="highlight-col">₹4,500</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BESPOKE GALLERY SHOWCASE ===== -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag"><i class="fas fa-camera-retro"></i> Custom Cake Portfolio</span>
+                <h2 class="section-title">Past <span class="highlight">Bespoke Creations</span></h2>
+                <div class="section-divider">
+                    <span class="divider-line"></span>
+                    <i class="fas fa-heart divider-icon"></i>
+                    <span class="divider-line"></span>
+                </div>
+                <p class="section-subtitle">A glimpse into some of the celebratory cakes baked with passion at Chapter Ten studio.</p>
+            </div>
+
+            <div class="custom-styles-grid reveal-up">
+                <div class="custom-style-card">
+                    <div class="custom-style-img-wrap">
+                        <img src="images/cake.jpg" alt="Vintage Lambeth Heart Cakes" loading="lazy">
+                        <span class="custom-style-badge">Vintage Aesthetic</span>
+                    </div>
+                    <div class="custom-style-info">
+                        <h4 class="custom-style-title">Vintage Lambeth Heart</h4>
+                        <p class="custom-style-desc">Lavish Victorian frills with cherries and handwritten cursive piped lettering.</p>
+                        <div class="custom-style-meta">
+                            <span class="custom-style-lead">Flavour: Red Velvet</span>
+                            <span class="custom-style-price">₹1,650</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="custom-style-card">
+                    <div class="custom-style-img-wrap">
+                        <img src="images/hero.jpg" alt="Botanical Wedding Tier" loading="lazy">
+                        <span class="custom-style-badge">Wedding Grandeur</span>
+                    </div>
+                    <div class="custom-style-info">
+                        <h4 class="custom-style-title">Botanical Gold Wedding Tier</h4>
+                        <p class="custom-style-desc">2-tier semi-naked ivory cake adorned with wafer florals and 24K edible gold leaves.</p>
+                        <div class="custom-style-meta">
+                            <span class="custom-style-lead">Flavour: Belgian Truffle</span>
+                            <span class="custom-style-price">₹2,800</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="custom-style-card">
+                    <div class="custom-style-img-wrap">
+                        <img src="images/pastries.jpg" alt="Korean Bento Box Minis" loading="lazy">
+                        <span class="custom-style-badge">Cute Bento</span>
+                    </div>
+                    <div class="custom-style-info">
+                        <h4 class="custom-style-title">Pastel Korean Bento</h4>
+                        <p class="custom-style-desc">Compact 4-inch cake in a cute eco box, personalized with whimsical illustrations.</p>
+                        <div class="custom-style-meta">
+                            <span class="custom-style-lead">Flavour: Biscoff Crunch</span>
+                            <span class="custom-style-price">₹650</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="custom-style-card">
+                    <div class="custom-style-img-wrap">
+                        <img src="images/brownies.jpg" alt="Chocolate Overload Tier" loading="lazy">
+                        <span class="custom-style-badge">Decadent</span>
+                    </div>
+                    <div class="custom-style-info">
+                        <h4 class="custom-style-title">Fudge Brownie Overload</h4>
+                        <p class="custom-style-desc">Cascading chocolate ganache topped with artisan brownies and golden crisp pearls.</p>
+                        <div class="custom-style-meta">
+                            <span class="custom-style-lead">Flavour: Triple Dark Truffle</span>
+                            <span class="custom-style-price">₹1,750</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 4-STEP CUSTOM CAKE PROCESS ===== -->
+    <section class="section" style="padding: var(--space-3xl) 0; background: linear-gradient(180deg, var(--bg-cream) 0%, rgba(224, 139, 139, 0.08) 100%);">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag"><i class="fas fa-list-check"></i> How It Works</span>
+                <h2 class="section-title">From Concept to <span class="highlight">Celebration</span></h2>
+                <div class="section-divider">
+                    <span class="divider-line"></span>
+                    <i class="fas fa-magic divider-icon"></i>
+                    <span class="divider-line"></span>
+                </div>
+            </div>
+
+            <div class="pillars-grid reveal-up">
+                <div class="pillar-card">
+                    <div class="pillar-icon-box"><i class="fas fa-comment-dots"></i></div>
+                    <h4 class="pillar-title">1. Design Chat</h4>
+                    <p class="pillar-desc">Choose your style online or message us your reference photos, theme, and guest count on WhatsApp.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon-box"><i class="fas fa-spoon"></i></div>
+                    <h4 class="pillar-title">2. Flavour Match</h4>
+                    <p class="pillar-desc">Select sponge and gourmet filling combinations, with full eggless &amp; dietary personalization.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon-box"><i class="fas fa-paint-brush"></i></div>
+                    <h4 class="pillar-title">3. Artisan Piping</h4>
+                    <p class="pillar-desc">Baked fresh on the morning of your event with real French butter and Belgian chocolate artistry.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon-box"><i class="fas fa-truck-ramp-box"></i></div>
+                    <h4 class="pillar-title">4. Chilled Delivery</h4>
+                    <p class="pillar-desc">Safely delivered in temperature-controlled packaging across Pune or picked up at our MG Road boutique.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CUSTOM CAKE FAQ ===== -->
+    <section class="faq-section" style="padding: var(--space-3xl) 0; background: var(--bg-card);">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag"><i class="fas fa-question-circle"></i> Have Questions?</span>
+                <h2 class="section-title">Custom Cake <span class="highlight">FAQs</span></h2>
+                <div class="section-divider">
+                    <span class="divider-line"></span>
+                    <i class="fas fa-info divider-icon"></i>
+                    <span class="divider-line"></span>
+                </div>
+            </div>
+
+            <div class="faq-container reveal-up" style="max-width: 780px; margin: 0 auto;">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How much advance notice do you require for custom cakes?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>For standard 1-tier custom cakes and bento boxes, 24 hours advance notice is usually sufficient! For complex 2-tier or 3-tier wedding cakes, we recommend ordering 48 to 72 hours in advance to allow adequate structural setting.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Are all custom cakes available in 100% Eggless?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, absolutely! Over 80% of our custom creations are 100% pure vegetarian (eggless). Our proprietary eggless sponge recipe is famously ultra-moist and velvety.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can I share a photo from Pinterest or Instagram?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Simply click our WhatsApp button and attach your reference image. Our head cake artist will discuss how to replicate the aesthetic in our signature Chapter Ten style.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do I safely store and transport the cake?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Keep your cake refrigerated until 30–45 minutes prior to slicing so the buttercream softens to its luscious serving temperature. For transport, always place the cake box flat on the car floor, never on an angled seat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="logo-text">chapter ten</span>
+                    <span class="logo-tagline">baking and more</span>
+                    <p>Where every bite tells a story. Artisan bakes crafted daily with pure passion in Pune.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/919876543210" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Explore Pages</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">Our Story &amp; Craft</a></li>
+                        <li><a href="menu.html">Bakery Menu &amp; Catalog</a></li>
+                        <li><a href="events.html">Events &amp; Catering</a></li>
+                        <li><a href="custom-cakes.html">Custom Cakes Studio</a></li>
+                        <li><a href="contact.html">Visit &amp; Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Artisan Specialties</h4>
+                    <ul>
+                        <li><a href="custom-cakes.html">Vintage Lambeth Heart Cakes</a></li>
+                        <li><a href="custom-cakes.html">Grand Wedding Tiers</a></li>
+                        <li><a href="custom-cakes.html">Pastel Bento Cakes</a></li>
+                        <li><a href="menu.html">Pure Butter Croissants</a></li>
+                        <li><a href="menu.html">100% Eggless Treats</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Shop No. 5, Rose Garden Complex, MG Road, Pune</p>
+                    <p><i class="fas fa-phone-alt"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> hello@chapterten.in</p>
+                    <p><i class="fas fa-clock"></i> Mon–Sat: 8AM–9PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Chapter Ten — Baking and More. All rights reserved.</p>
+                <p>Designed with <i class="fas fa-heart" style="color: var(--coral);"></i> for sweetest moments</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
